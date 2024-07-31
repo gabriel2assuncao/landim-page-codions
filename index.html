@@ -4,53 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lading Page</title>
-    <Style>
+    <title>Landing Page</title>
+    <style>
         body,
         html {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
-            height: 100px;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
-        .header-container {
-            width: 100%;
-            height: 100vh;
+        body {
             background-image: url('imagens/fundo.jpg');
             background-size: cover;
             background-position: center;
-            flex-direction: column;
-            justify-content: space-between;
+            background-repeat: no-repeat;
             color: white;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            padding: 20px;
-            border: 2px solid red;
         }
 
-        .header-top {
-
-            width: 100px;
+        .header-container {
+            width: 90%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .logo {
+            margin-left: 0px;
 
         }
 
         .logo img {
-            height: 25px;
-            border: 2px solid rgb(44, 120, 150);
+            height: 40px;
+
         }
 
         nav ul {
             list-style: none;
             display: flex;
             gap: 20px;
+
             margin: 0;
             padding: 0;
+            margin-right: 20px;
+
         }
 
         nav ul li {
@@ -62,51 +67,40 @@
             text-decoration: none;
         }
 
-        .main-content {
-            padding: 20px;
-            background-image: url('imagens/fundo.jpg');
-            background-size: cover;
-            background-position: center;
-            min-height: 600px;
-        }
-
-        .header-container {
-            text-align: center;
-            border: 2px solid orange;
-            margin-top: auto;
-        }
-
         .header-content {
-            margin-top: 10;
-            background-color: rgba(0, 0, 255, 0.7);
-            border: 2px solid brown;
+            text-align: center;
+            margin-top: 100px;
 
+            padding: 20px;
         }
-    </Style>
+
+        .header-content h1,
+        .header-content p {
+            margin: 0;
+        }
+    </style>
 </head>
 
 <body>
-    <Header class="Header">
-
+    <header class="header-container">
         <div class="logo">
-            <div class="cotainer">
-                <img src="imagens/logo-color.svg" alt="Logo Codions">
-            </div>
-            <nav>
-
-                <ul>
-                    <li><a href="#"></a>Inicio</li>
-                    <li><a href="#"></a>Quem Somos</li>
-                    <li><a href="#"></a>Serviços</li>
-                    <li><a href="#"></a>Fale Conosco</li>
-                </ul>
-            </nav>
-
-    </Header>
-    <main class="main-content">
+            <img src="imagens/logo-color.svg" alt="Logo Codions">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Quem Somos</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="header-content">
         <h1>Desenvolvemos seu projeto de Aplicativo, Sistema e Site</h1>
         <p>Somos um time versátil, especializado em desenvolvimento de Aplicativos, plataformas web e produtos digitais.
         </p>
+    </div>
+    <main class="main-content">
     </main>
 </body>
 
