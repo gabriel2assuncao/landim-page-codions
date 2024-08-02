@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="Pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,6 @@
             font-family: Arial, sans-serif;
             height: 100%;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
         }
 
         body {
@@ -29,7 +28,7 @@
         }
 
         .header-container {
-            width: 90%;
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -39,23 +38,18 @@
 
         .logo {
             margin-left: 0px;
-
         }
 
         .logo img {
             height: 40px;
-
         }
 
         nav ul {
             list-style: none;
             display: flex;
             gap: 20px;
-
             margin: 0;
             padding: 0;
-            margin-right: 20px;
-
         }
 
         nav ul li {
@@ -70,13 +64,33 @@
         .header-content {
             text-align: center;
             margin-top: 100px;
-
             padding: 20px;
         }
 
         .header-content h1,
         .header-content p {
             margin: 0;
+        }
+
+        .main-content {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: black;
+            text-align: center;
+            width: 100%;
+        }
+
+        .section-services {
+            padding: 20px;
+        }
+
+        .section-services .img-service {
+            text-align: center;
+        }
+
+        .section-services img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
@@ -96,62 +110,40 @@
         </nav>
     </header>
     <div class="header-content">
-        <div class="row">
-            <div class="col-lg-8 ">
-                <div class="header-inner">
-                    <h1 class="title">Desenvolvemos seu projeto de Aplicativo, Sistema e Site</h1>
-                    <p>Somos um time versátil, especializado em desenvolvimento de Aplicativos, plataformas web e
-                        produtos
-                        digitais.
-                    </p>
-                    <div class="u-margim-top-small">
-                        <a class="button button--blue.button--medium" href="#">Peça um orçamento agora!</a>
-                        <a class="button button--white.button--medium" href="#">Conheça nossos serviços</a>
-                    </div>
-                </div>
-            </div>
+        <h1>Desenvolvemos seu projeto de Aplicativo, Sistema e Site</h1>
+        <p>Somos um time versátil, especializado em desenvolvimento de Aplicativos, plataformas web e produtos digitais.</p>
+        <div class="u-margim-top-small">
+            <a class="button button--blue.button--medium" href="#">Peça um orçamento agora!</a>
+            <a class="button button--white.button--medium" href="#">Conheça nossos serviços</a>
         </div>
     </div>
 
     <main class="main-content">
-
-        <div id="ou-services">
+        <div id="our-services">
             <section class="section">
-                <div class="coitainer text-center"></div>
-                <span class="text-muted">TUDO QUE VOCÊ PRECISA</span>
-                <h2 class="section-title text-center">Criamos soluções digitais que usam a tecnologia para o seu
-                    negócio
-                    alçar voos mais altos e obter o resultado que você espera.
-                </h2>
-        </div>
-        </div>
-        </section>
+                <div class="container text-center">
+                    <span class="text-muted">TUDO QUE VOCÊ PRECISA</span>
+                    <h2 class="section-title">Criamos soluções digitais que usam a tecnologia para o seu negócio alçar voos mais altos e obter o resultado que você espera.</h2>
+                </div>
+            </section>
 
-        <section class="section-services item">
-            <div class="coitainer">
-                <div class="row">
-                    <div class="col-md-4 img-service">
-                        <img src="imagens/systems-development.svg" alt="Desenvolvimento de Sites" class="img-fluid">
-
+            <section class="section-services item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 img-service">
+                            <img src="imagens/systems-development.svg" alt="Desenvolvimento de Sites" class="img-fluid">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="section-intro">
+                                <h2 class="section-title">Desenvolvimento de Sites</h2>
+                                <p>Soluções criativas e inovadoras para o seu negócio, com otimização de recursos e resultados a curto prazo. Criamos sites atraentes e funcionais que se adéquam ao seu negócio e permitem que você atualize facilmente o conteúdo.</p>
+                                <a href="#" class="button">Saiba mais</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-8">
-                <div class="section-intro">
-                    <h2 class="section-title"> Desenvolvimento de Sites</h2>
-                    <p>Soluções criativas e inovadoras para o seu negócio, com otimização de recursos e
-                        resultados a curto prazo. Criamos sites atraentes e funcionais que se adéquam ao seu
-                        negócio e permitem que você atualize facilmente o conteúdo</p>
-                        <a href="#" class="#" Saiba mais>
-
-                        </a>
-
-                </div>
-            </div>
-
-
-        </section>
-
+            </section>
+        </div>
     </main>
 </body>
 
