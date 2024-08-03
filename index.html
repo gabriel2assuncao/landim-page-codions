@@ -17,7 +17,7 @@
         }
 
         body {
-            background-image: url('imagens/fundo.jpg');
+            background-image: url('imagens/fundobg-1.jpeg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -34,10 +34,6 @@
             align-items: center;
             padding: 20px;
             position: relative;
-        }
-
-        .logo {
-            margin-left: 0px;
         }
 
         .logo img {
@@ -72,6 +68,24 @@
             margin: 0;
         }
 
+        .button {
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .button--blue {
+            background-color: blue;
+            color: white;
+        }
+
+        .button--white {
+            background-color: white;
+            color: black;
+        }
+
         .main-content {
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.9);
@@ -84,13 +98,70 @@
             padding: 20px;
         }
 
-        .section-services .img-service {
-            text-align: center;
+        .container {
+            width: 720px;
+            height: 323.69px;
+            margin: 0 auto;
+        }
+ 
+        .row {
+            display: flex;
+            align-items: center;
+            width: 720px;
+            height: 313.69px;
+            margin-bottom: 20px; /* Espaço entre as linhas, se necessário */
+        }
+
+        /* Alterna o alinhamento das imagens */
+        .row:nth-child(odd) {
+            flex-direction: row; /* Imagem à esquerda para linhas ímpares */
+        }
+
+        .row:nth-child(even) {
+            flex-direction: row-reverse; /* Imagem à direita para linhas pares */
+        }
+
+        .col-md-4.img-service {
+            flex: 0 0 240px;
+            height: 313.69px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img-fluid {
+            width: 210px;
+            height: 183.95px;
+        }
+
+        .section-services .section-intro {
+            text-align: left; /* Ajuste o alinhamento do texto conforme necessário */
         }
 
         .section-services img {
             max-width: 100%;
             height: auto;
+        }
+
+        .clients-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 720px;
+            height: 138.98px;
+            margin: 0 auto;
+            background-color: #f5f5f5;
+            padding: 10px;
+        }
+
+        .client {
+            flex: 1;
+            text-align: center;
+        }
+
+        .client img {
+            max-width: 100px;
+            max-height: 100px;
         }
     </style>
 </head>
@@ -98,7 +169,7 @@
 <body>
     <header class="header-container">
         <div class="logo">
-            <img src="imagens/logo-color.svg" alt="Logo Codions">
+            <img src="imagens/logo-white.svg" alt="Logo Codions">
         </div>
         <nav>
             <ul>
@@ -111,188 +182,153 @@
     </header>
     <div class="header-content">
         <h1>Desenvolvemos seu projeto de Aplicativo, Sistema e Site</h1>
-        <p>Somos um time versátil, especializado em desenvolvimento de Aplicativos, plataformas web e produtos digitais.
-        </p>
+        <p>Somos um time versátil, especializado em desenvolvimento de Aplicativos, plataformas web e produtos digitais.</p>
         <div class="u-margim-top-small">
-            <a class="button button--blue.button--medium" href="#">Peça um orçamento agora!</a>
-            <a class="button button--white.button--medium" href="#">Conheça nossos serviços</a>
+            <a class="button button--blue" href="#">Peça um orçamento agora!</a>
+            <a class="button button--white" href="#">Conheça nossos serviços</a>
         </div>
     </div>
 
     <main class="main-content">
-        <div id="our-services">
-            <section class="section">
-                <div class="container text-center">
-                    <span class="text-muted">TUDO QUE VOCÊ PRECISA</span>
-                    <h2 class="section-title">Criamos soluções digitais que usam a tecnologia para o seu negócio alçar
-                        voos mais altos e obter o resultado que você espera.</h2>
-                </div>
-            </section>
+        <section id="our-services">
+            <div class="container text-center">
+                <span class="text-muted">TUDO QUE VOCÊ PRECISA</span>
+                <h2 class="section-title">Criamos soluções digitais que usam a tecnologia para o seu negócio alçar voos mais altos e obter o resultado que você espera.</h2>
+            </div>
+        </section>
 
-            <section class="section-services item">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 img-service">
-                            <img src="imagens/systems-development.svg" alt="Desenvolvimento de Sites" class="img-fluid">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="section-intro">
-                                <h2 class="section-title">Desenvolvimento de Sites</h2>
-                                <p>Soluções criativas e inovadoras para o seu negócio, com otimização de recursos e
-                                    resultados a curto prazo. Criamos sites atraentes e funcionais que se adéquam ao seu
-                                    negócio e permitem que você atualize facilmente o conteúdo.</p>
-                                <a href="#" class="button">Saiba mais</a>
-                            </div>
+        <section class="section-services item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 img-service">
+                        <img src="imagens/systems-development.svg" alt="Desenvolvimento de Sites" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="section-intro">
+                            <h2 class="section-title">Desenvolvimento de Sites</h2>
+                            <p>Soluções criativas e inovadoras para o seu negócio, com otimização de recursos e resultados a curto prazo. Criamos sites atraentes e funcionais que se adéquam ao seu negócio e permitem que você atualize facilmente o conteúdo.</p>
+                            <a href="#" class="button">Saiba mais</a>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="section-services item">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 img-service">
-                            <img src="imagens/app-development.svg" alt="Desenvolvimento de Aplicativos"
-                                class="img-fluid">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="section-intro">
-                                <h2 class="section-title">Desenvolvimento de Aplicativos</h2>
-                                <p>Desenvolvemos aplicativos personalizados que atendem às necessidades específicas do
-                                    seu negócio, proporcionando uma experiência de usuário intuitiva e funcional.</p>
-                                <a href="#" class="button">Saiba mais</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section-services item">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 img-service">
-                            <img src="imagens/systems-development.svg" alt="Desenvolvimento de Sistemas"
-                                class="img-fluid">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="section-intro">
-                                <h2 class="section-title">Desenvolvimento de Sistemas</h2>
-                                <p> Com um sistema personalizado, tudo o que você precisa para ter uma excelente gestão
-                                    poderá ser desenvolvido. Acesse sempre que precisar, seja no local de trabalho ou
-                                    home-office. Você poderá gerenciar o seu negócio de qualquer lugar. </p>
-                                <a href="#" class="button">Saiba mais</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section-services item">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 img-service">
-                            <img src="imagens/ecommerce-development.svg" alt="Desenvolvimento de Loja Virtual"
-                                class="img-fluid">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="section-intro">
-                                <h2 class="section-title">Desenvolvimento de Loja Virtual</h2>
-                                <p> Não existem fronteiras para quem tem uma loja virtual. Sua empresa terá
-                                    oportunidades de gerar vendas para o mundo inteiro. Que tal potencializar suas
-                                    vendas criando um e-commerce conosco?</p>
-                                <a href="#" class="button">Saiba mais</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section-services item">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 img-service">
-                            <img src="imagens/automation-development.svg" alt="Automação de fluxo de trabalho"
-                                class="img-fluid">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="section-intro">
-                                <h2 class="section-title">Automação de fluxo de trabalho</h2>
-                                <p>Desenvolvemos soluções inteligentes para automação dos processos internos da sua
-                                    empresa. Veja como podemos ajudar a reduzir o tempo e eliminar etapas desnecessárias
-                                    de seus processos de negócio.</p>
-                                <a href="#" class="button">Saiba mais</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section-services item">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 img-service">
-                            <img src="imagens/web-hosting.svg" alt="Hospedagem de sites e sistemas" class="img-fluid">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="section-intro">
-                                <h2 class="section-title">Hospedagem de sites e sistemas</h2>
-                                <p>Você é livre para hospedar o trabalho que criamos em qualquer outro servidor, mas se
-                                    você deseja resolver tudo em um só lugar, podemos tirar este trabalho da sua lista
-                                    de tarefas e simplificar ainda mais os seus processos de trabalho.</p>
-                                <a href="#" class="button">Saiba mais</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <section class="section section--off-white">
-                    <div class="container">
-                        <h2 class="section-title">Conheça alguns clientes Codions</h2>
-                        <p class="section-lead">
-                            Estes são alguns dos clientes que confiam no nosso trabalho. <a href="#">Faça parte do nosso
-                                time</a> e torne seu negócio global! <a href="#">Saiba mais.</a>
-                        </p>
-                        <div class="clients-container">
-                            <div class="client">
-                                <img src="imagens/m.p.r.j.png" alt="Ministério Público do Estado do Rio de Janeiro">
-                            </div>
-                            <div class="client">
-                                <img src="imagens/sebrae-sp.png" alt="SEBRAE SP">
-                            </div>
-                            <div class="client">
-                                <img src="imagens/mppa.png" alt="Ministério Público do Estado do Pará">
-                            </div>
-                            <div class="client">
-                                <img src="imagens/cena2.png" alt="Produtos Digitais">
-                            </div>
-                            <div class="client">
-                                <img src="imagens/vestas.png" alt="Vestas">
-                            </div>
-                            <div class="client">
-                                <img src="imagens/crea-ce.png" alt="Conselho Regional de Engenharia e Agronomia do Ceará">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <style>
-                    .clients-container {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        width: 720px;
-                        height: 138.98px;
-                        margin: 0 auto;
-                        background-color: #f5f5f5;
-                        padding: 10px;
-                    }
+            </div>
+        </section>
 
-                    .client {
-                        flex: 1;
-                        text-align: center;
-                    }
+        <section class="section-services item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 img-service">
+                        <img src="imagens/app-development.svg" alt="Desenvolvimento de Aplicativos" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="section-intro">
+                            <h2 class="section-title">Desenvolvimento de Aplicativos</h2>
+                            <p>Desenvolvemos aplicativos personalizados que atendem às necessidades específicas do seu negócio, proporcionando uma experiência de usuário intuitiva e funcional.</p>
+                            <a href="#" class="button">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    .client img {
-                        max-width: 100px;
+        <section class="section-services item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 img-service">
+                        <img src="imagens/systems-development.svg" alt="Desenvolvimento de Sistemas" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="section-intro">
+                            <h2 class="section-title">Desenvolvimento de Sistemas</h2>
+                            <p>Com um sistema personalizado, tudo o que você precisa para ter uma excelente gestão poderá ser desenvolvido. Acesse sempre que precisar, seja no local de trabalho ou home-office. Você poderá gerenciar o seu negócio de qualquer lugar.</p>
+                            <a href="#" class="button">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        max-height: 100px;
+        <section class="section-services item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 img-service">
+                        <img src="imagens/ecommerce-development.svg" alt="Desenvolvimento de Loja Virtual" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="section-intro">
+                            <h2 class="section-title">Desenvolvimento de Loja Virtual</h2>
+                            <p>Não existem fronteiras para quem tem uma loja virtual. Sua empresa terá oportunidades de gerar vendas para o mundo inteiro. Que tal potencializar suas vendas criando um e-commerce conosco?</p>
+                            <a href="#" class="button">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    }
-                </style>
+        <section class="section-services item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 img-service">
+                        <img src="imagens/automation-development.svg" alt="Automação de fluxo de trabalho" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="section-intro">
+                            <h2 class="section-title">Automação de fluxo de trabalho</h2>
+                            <p>Desenvolvemos soluções inteligentes para automação dos processos internos da sua empresa. Veja como podemos ajudar a reduzir o tempo e eliminar etapas desnecessárias de seus processos de negócio.</p>
+                            <a href="#" class="button">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="section-services item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 img-service">
+                        <img src="imagens/web-hosting.svg" alt="Hospedagem de sites e sistemas" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="section-intro">
+                            <h2 class="section-title">Hospedagem de sites e sistemas</h2>
+                            <p>Você é livre para hospedar o trabalho que criamos em qualquer outro servidor, mas se você deseja resolver tudo em um só lugar, podemos tirar este trabalho da sua lista de tarefas e simplificar ainda mais os seus processos de trabalho.</p>
+                            <a href="#" class="button">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--off-white">
+            <div class="container">
+                <h2 class="section-title">Conheça alguns clientes Codions</h2>
+                <p class="section-lead">
+                    Estes são alguns dos clientes que confiam no nosso trabalho.
+                    <a href="#">Faça parte do nosso time</a> e torne seu negócio global!
+                    <a href="#">Saiba mais.</a>
+                </p>
+                <div class="clients-container">
+                    <div class="client">
+                        <img src="imagens/m.p.r.j.png" alt="Ministério Público do Estado do Rio de Janeiro">
+                    </div>
+                    <div class="client">
+                        <img src="imagens/sebrae-sp.png" alt="SEBRAE SP">
+                    </div>
+                    <div class="client">
+                        <img src="imagens/mppa.png" alt="Ministério Público do Estado do Pará">
+                    </div>
+                    <div class="client">
+                        <img src="imagens/cena2.png" alt="Produtos Digitais">
+                    </div>
+                    <div class="client">
+                        <img src="imagens/vestas.png" alt="Vestas">
+                    </div>
+                    <div class="client">
+                        <img src="imagens/crea-ce.png" alt="Conselho Regional de Engenharia e Agronomia do Ceará">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 
