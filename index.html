@@ -100,6 +100,7 @@
             border-radius: 8px;
             text-align: center;
             color: black;
+            background-color: #fefefe;
         }
 
         .content p,
@@ -114,6 +115,7 @@
             justify-content: space-around;
             color: black;
             background-color: #f3f5f9;
+            /* uma das cores para fazer o teste. é #030c1d*/
         }
 
 
@@ -123,16 +125,18 @@
         }
 
         .clients {
-            margin-top: 30px;
-            padding: 100px;
+            margin-top: 20px;
+            padding: 190px;
             border-radius: 8px;
             justify-content: space-around;
-            background-color: #51575b;
+            background-color: #030c1d;
         }
 
         .clients h2,
         .clients p {
             margin-top: 10px 0;
+            font-family: sans-serif;
+
         }
 
         .services .row {
@@ -154,15 +158,34 @@
         .services .row:nth-child(even) {
             flex-direction: row-reverse;
         }
+
         .footer {
             margin-top: 10px;
             padding: 300px;
+            border-radius: 15px;
+            justify-content: space-around;
+            background-color: #f3f5f9;
+        }
+
+
+        .footer h2,
+        .footer p {
+            color: black;
+        }
+
+        .sobre {
+            color: #030c1d;
+
+        }
+
+        .rodape {
+            margin-top: 20px;
+            background-color: rgba(3,27,78,.7);
+            padding: 30px;
             border-radius: 8px;
             justify-content: space-around;
-            background-color: #030c1d
-            /*background-color:#030c1d*/
+        }
 
-      }
     </style>
 </head>
 
@@ -277,18 +300,19 @@
             }
         </style>
         <div>
-            <h2 class="title">Conheça alguns clientes Codions</h2>
-            <p>Estes são alguns dos clientes que confiam no nosso trabalho. Faça parte do nosso time e torne seu negócio
-                global!</p>
-            <a href="#">Saiba mais.</a>
+            <h2 class="title"><b>Conheça alguns clientes Codions</b></h2>
+            <p><b>Estes são alguns dos clientes que confiam no nosso trabalho. Faça parte do nosso time e torne seu
+                    negócio global!</b></p>
+            <a href="#"><b>Saiba mais.</b></a>
             <ul>
-                <li img src="imagens/m.p.r.j.png" alt="Ministério Publico do Estado do Rio de Janeiro" width="88">
+                <li>
+                    <img src="imagens/m.p.r.j.png" alt="Ministério Publico do Estado do Rio de Janeiro" width="88">
                 </li>
                 <li>
                     <img src="imagens/sebrae-sp.png" alt="SEBRAE-SP" width="88">
                 </li>
                 <li>
-                    <img src="imagens/mppa.png" alt="Ministério Publico do Estado do Pára" width="88">
+                    <img src="imagens/mppa.png" alt="Ministério Publico do Estado do Pará" width="88">
                 </li>
                 <li>
                     <img src="imagens/cena2.png" alt="Produções Digitais" width="88">
@@ -303,12 +327,76 @@
             </ul>
         </div>
     </section>
-    <div class="footer">
-        <footer>
+
+    <section>
+        <div class="footer">
+            <footer>
                 <h2 class="title">Vamos conversar e transformar sua ideia em algo extraordinário</h2>
                 <p>Já tiramos centenas de ideias do papel e tivemos o prazer de trabalhar com diversas empresas</p>
                 <button class="button">Peça um orçamento agora!</button>
-        </footer>
+
+                <div class="sobre">
+                    <div>
+                        <h4 class="title">Sobre</h4>
+                        <ul>
+                            <li><a href="#">Início</a></li>
+                            <li><a href="#">Quem Somos</a></li>
+                            <li><a href="#">Nossos Clientes</a></li>
+                            <li><a href="#">Institucional</a></li>
+                            <li><a href="#">Diretrizes</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="title">Serviços</h4>
+                        <ul>
+                            <li><a href="#">Sistemas</a></li>
+                            <li><a href="#">Sites</a></li>
+                            <li><a href="#">Aplicativos</a></li>
+                            <li><a href="#">E-commerce</a></li>
+                            <li><a href="#">Automação</a></li>
+                            <li><a href="#">Hospedagem</a></li>
+                            <li><a href="#">Tecnologias</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="title">Soluções</h4>
+                        <ul>
+                            <li><a href="#">Blue Live</a></li>
+                            <li><a href="#">Live</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Blue EAD</a></li>
+                            <li><a href="#">Conttas</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="title">Contato</h4>
+                        <ul>
+                            <li><a href="#">Fale Conosco</a></li>
+                            <li><a href="#">Cotação</a></li>
+                            <li><a href="#">Dúvidas</a></li>
+                            <li><a href="#">Suporte</a></li>
+                            <li><a href="#">Sugestões</a></li>
+                            <li><a href="#">Vagas</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="title">Codions</h4>
+                        <ul>
+                            <li><a href="#">contato@codions.com</a></li>
+                            <li><a href="#">🖈 Rua das Palmeiras, 07, Quadra A - Jardim Renascença, São Luís - Ma,
+                                    65075-300.</a></li>
+                            <li><a href="#">Politicas de Privacidade</a></li>
+                            <li><a href="#">Termos de Uso</a></li>
+                            <li><a href="#" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+                            <li><a href="#" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+    <div class="rodape">
+        <p>Copyright © 2022 Codions Tecnologia Criativa LTDA</p>
     </div>
 </body>
 
